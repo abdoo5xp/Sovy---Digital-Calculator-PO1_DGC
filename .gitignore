@@ -51,3 +51,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 /.metadata/
+
+/SWE/Software Specification/Architecture/GDD/autosar feedback.txt
