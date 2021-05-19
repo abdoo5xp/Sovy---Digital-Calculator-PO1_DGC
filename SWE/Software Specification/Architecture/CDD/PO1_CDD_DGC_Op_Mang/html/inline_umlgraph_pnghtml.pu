@@ -1,0 +1,37 @@
+@startuml inline_umlgraph_1.png
+start
+if (Keypad_Struct->InputOperations == \n Keypad_Struct->Inputnumbers && \n Keypad_Struct->Status_Flag == 1) then (true)
+  :Keypad_Struct->Inputnumbers[0] \n =*Final_Result/100;
+elseif (Keypad_Struct->InputOperations >= \n Keypad_Struct->Inputnumbers && \n Keypad_Struct->Status_Flag==0) then (true)
+  :Lcd_Send_Packet(LCD_CMD_CLEAR,IS_CMD);
+  :Lcd_GoTo(0,0);
+  :Lcd_WriteString("Syntax Error");
+  :return E_NOK;
+  end
+else (neither correct)
+endif
+:Return_Status=Math_CALC(&mystruct,&Final_Result);
+if (Return_Status==E_NOK) then (true)
+  :Lcd_Send_Packet(LCD_CMD_CLEAR,IS_CMD);
+  :Lcd_GoTo(0,0);
+  :Lcd_WriteString("Math Error");
+  :return E_NOK;
+  stop
+endif
+:Loc_u64Num=*Final_Result;
+while (Loc_u64Num!=0 ?) is (true)
+  :Loc_u8aPrintArray[i]= Loc_u64Num%10;
+
+ if ((16-i) == 14 ) then (true)
+  :Lcd_GoTo(1,16-i);
+  :LCD_DISPLAY('.');
+ else (false)
+  :Lcd_GoTo(1,16-i);
+  :LCD_DISPLAY(Loc_u8aPrintArray[i]);
+ endif
+ :i++;
+ :Loc_u64Num /=10;
+endwhile (false)
+:return E_OK;
+stop
+@enduml

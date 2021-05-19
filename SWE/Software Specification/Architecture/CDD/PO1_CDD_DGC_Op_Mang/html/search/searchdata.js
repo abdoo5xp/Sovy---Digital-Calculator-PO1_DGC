@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cfknos",
+  0: "dfknos",
   1: "k",
-  2: "c",
+  2: "do",
   3: "o",
   4: "fnos"
 };

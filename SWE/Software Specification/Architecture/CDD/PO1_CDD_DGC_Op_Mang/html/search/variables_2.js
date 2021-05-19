@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['operands_19',['Operands',['../struct_keypad___manager__s.html#adc12ca4371a08070ed5159d3ecf92db8',1,'Keypad_Manager_s']]],
-  ['operations_20',['Operations',['../struct_keypad___manager__s.html#a4c4cc776b52bad99f291b16a85551d77',1,'Keypad_Manager_s']]]
+  ['operands_19',['Operands',['../struct_keypad___manager__s.html#aa12e6cdd6634319ad9884e923914d843',1,'Keypad_Manager_s']]],
+  ['operations_20',['Operations',['../struct_keypad___manager__s.html#a761051c7d63da4e4ec2832930e977d3f',1,'Keypad_Manager_s']]]
 ];
