@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: mathCalc.h File Reference</title>
+<title>Math_Calc: mathCalc.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Math_Calc
+   &#160;<span id="projectnumber">0.1</span>
    </div>
   </td>
  </tr>
@@ -62,25 +63,24 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">mathCalc.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="_data___types_8h_source.html">Data_Types.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for mathCalc.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="math_calc_8h__incl.png" border="0" usemap="#amath_calc_8h" alt=""/></div>
+</div>
+</div>
 <p><a href="math_calc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkeypad__s.html">keypad_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure contain the entered operands and operation and their numbers.  <a href="structkeypad__s.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab7c41a71e211c6273450f6a1463b39c1"><td class="memItemLeft" align="right" valign="top">ReturnStatus_e&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="math_calc_8h.html#ab7c41a71e211c6273450f6a1463b39c1">Math_Calc</a> (<a class="el" href="structkeypad__s.html">keypad_s</a> *inputNumbers, u64 *result)</td></tr>
-<tr class="separator:ab7c41a71e211c6273450f6a1463b39c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253ede46ae6271ed1798b438a56efe57"><td class="memItemLeft" align="right" valign="top">ReturnStatus_e&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="math_calc_8h.html#a253ede46ae6271ed1798b438a56efe57">Math_Calc</a> (<a class="el" href="struct_keypad___manager__s.html">Keypad_Manager_s</a> *inputNumbers, u64 *result)</td></tr>
+<tr class="separator:a253ede46ae6271ed1798b438a56efe57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section date"><dt>Date</dt><dd>: Feb 14, 2021 </dd></dl>
@@ -96,8 +96,8 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="math_calc_8h_source.html">mathCalc.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ab7c41a71e211c6273450f6a1463b39c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7c41a71e211c6273450f6a1463b39c1">&#9670;&nbsp;</a></span>Math_Calc()</h2>
+<a id="a253ede46ae6271ed1798b438a56efe57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253ede46ae6271ed1798b438a56efe57">&#9670;&nbsp;</a></span>Math_Calc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,7 +105,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">ReturnStatus_e Math_Calc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structkeypad__s.html">keypad_s</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_keypad___manager__s.html">Keypad_Manager_s</a> *&#160;</td>
           <td class="paramname"><em>inputNumbers</em>, </td>
         </tr>
         <tr>
@@ -147,7 +147,7 @@ Functions</h2></td></tr>
  
 <p class="definition">Definition at line <a class="el" href="math_calc_8c_source.html#l00015">15</a> of file <a class="el" href="math_calc_8c_source.html">mathCalc.c</a>.</p>
 
-<p class="reference">References <a class="el" href="math_calc_8h_source.html#l00034">keypad_s::InputOperations</a>, <a class="el" href="math_calc_8h_source.html#l00035">keypad_s::NumberOfInputNumbers</a>, and <a class="el" href="math_calc_8h_source.html#l00036">keypad_s::NumberOfInputOperations</a>.</p>
+<p class="reference">References <a class="el" href="_data___types_8h_source.html#l00023">Keypad_Manager_s::NumOfOperations</a>, <a class="el" href="_data___types_8h_source.html#l00020">Keypad_Manager_s::Operands</a>, and <a class="el" href="_data___types_8h_source.html#l00021">Keypad_Manager_s::Operations</a>.</p>
 
 </div>
 </div>

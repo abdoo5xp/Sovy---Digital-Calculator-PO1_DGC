@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: mathCalc.h Source File</title>
+<title>Math_Calc: mathCalc.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Math_Calc
+   &#160;<span id="projectnumber">0.1</span>
    </div>
   </td>
  </tr>
@@ -68,28 +69,19 @@ $(function() {
 <a href="math_calc_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef MATHCALC_H_</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define MATHCALC_H_</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_data___types_8h.html">Data_Types.h</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structkeypad__s.html">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structkeypad__s.html#a4f4d19092edff141e724950a3d211e00">   33</a></span>&#160;    u32 Inputnumbers[4];</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structkeypad__s.html#a3256417cffb98da9a9498a8aa163ffdf">   34</a></span>&#160;    u8 InputOperations[3];</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structkeypad__s.html#a250a80463b741dd4d7007600b13a3f14">   35</a></span>&#160;    u8 <a class="code" href="structkeypad__s.html#a250a80463b741dd4d7007600b13a3f14">NumberOfInputNumbers</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structkeypad__s.html#a1a8a10b5b0a03aea397a23c0d1a82251">   36</a></span>&#160;    u8 <a class="code" href="structkeypad__s.html#a1a8a10b5b0a03aea397a23c0d1a82251">NumberOfInputOperations</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}<a class="code" href="structkeypad__s.html">keypad_s</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;ReturnStatus_e <a class="code" href="math_calc_8h.html#ab7c41a71e211c6273450f6a1463b39c1">Math_Calc</a>(<a class="code" href="structkeypad__s.html">keypad_s</a> *inputNumbers, u64 *result);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATHCALC_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="amath_calc_8h_html_ab7c41a71e211c6273450f6a1463b39c1"><div class="ttname"><a href="math_calc_8h.html#ab7c41a71e211c6273450f6a1463b39c1">Math_Calc</a></div><div class="ttdeci">ReturnStatus_e Math_Calc(keypad_s *inputNumbers, u64 *result)</div><div class="ttdef"><b>Definition:</b> <a href="math_calc_8c_source.html#l00015">mathCalc.c:15</a></div></div>
-<div class="ttc" id="astructkeypad__s_html"><div class="ttname"><a href="structkeypad__s.html">keypad_s</a></div><div class="ttdoc">This structure contain the entered operands and operation and their numbers.</div><div class="ttdef"><b>Definition:</b> <a href="math_calc_8h_source.html#l00031">mathCalc.h:31</a></div></div>
-<div class="ttc" id="astructkeypad__s_html_a1a8a10b5b0a03aea397a23c0d1a82251"><div class="ttname"><a href="structkeypad__s.html#a1a8a10b5b0a03aea397a23c0d1a82251">keypad_s::NumberOfInputOperations</a></div><div class="ttdeci">u8 NumberOfInputOperations</div><div class="ttdef"><b>Definition:</b> <a href="math_calc_8h_source.html#l00036">mathCalc.h:36</a></div></div>
-<div class="ttc" id="astructkeypad__s_html_a250a80463b741dd4d7007600b13a3f14"><div class="ttname"><a href="structkeypad__s.html#a250a80463b741dd4d7007600b13a3f14">keypad_s::NumberOfInputNumbers</a></div><div class="ttdeci">u8 NumberOfInputNumbers</div><div class="ttdef"><b>Definition:</b> <a href="math_calc_8h_source.html#l00035">mathCalc.h:35</a></div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;ReturnStatus_e <a class="code" href="math_calc_8h.html#a253ede46ae6271ed1798b438a56efe57">Math_Calc</a>(<a class="code" href="struct_keypad___manager__s.html">Keypad_Manager_s</a> *inputNumbers, u64 *result);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATHCALC_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_data___types_8h_html"><div class="ttname"><a href="_data___types_8h.html">Data_Types.h</a></div></div>
+<div class="ttc" id="amath_calc_8h_html_a253ede46ae6271ed1798b438a56efe57"><div class="ttname"><a href="math_calc_8h.html#a253ede46ae6271ed1798b438a56efe57">Math_Calc</a></div><div class="ttdeci">ReturnStatus_e Math_Calc(Keypad_Manager_s *inputNumbers, u64 *result)</div><div class="ttdef"><b>Definition:</b> <a href="math_calc_8c_source.html#l00015">mathCalc.c:15</a></div></div>
+<div class="ttc" id="astruct_keypad___manager__s_html"><div class="ttname"><a href="struct_keypad___manager__s.html">Keypad_Manager_s</a></div><div class="ttdoc">This structure contain the entered operands and operation and their numbers.</div><div class="ttdef"><b>Definition:</b> <a href="_data___types_8h_source.html#l00019">Data_Types.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -15,27 +15,8 @@
 
 #ifndef MATHCALC_H_
 #define MATHCALC_H_
+#include "Data_Types.h"
 
-
-/** @struct keypad_s
- *  	@brief This structure contain the entered operands and operation and their numbers.
- * @param Inputnumbers[4]
- *  	@nContain the enterted operands.
- * @param InputOperations[3]
- *  	@nContain the enterted operations.
- *  @param NumberOfInputNumbers
- *  	@nContain the nubmer of operands.
- *  @param NumberOfInputOperations
- *  	@nContain the nubmer of operations.
- */
-typedef struct{
-
-    u32 Inputnumbers[4];
-    u8 InputOperations[3];
-    u8 NumberOfInputNumbers;
-    u8 NumberOfInputOperations;
-
-}keypad_s;
 
 
 
@@ -69,26 +50,26 @@ typedef struct{
 *start
 *:returnStatus = E_OK;
 *: i = 0;
-*:tempResult = inputNumbers->NumberOfInputNumbers[0];
+*:tempResult = inputNumbers->Operands[0];
 *repeat
-*  if ('+') then (yes)
-*  :*result = tempResult + inputNumbers->NumberOfInputNumbers[i+1];
-*elseif ('-') then (yes)
-*  :*result = tempResult - inputNumbers->NumberOfInputNumbers[i+1];
-*elseif ('/') then (yes)
-*  if (!(inputNumbers->NumberOfInputNumbers[i+1])) then (yes)
-*  :*result =  tempResult / inputNumbers->NumberOfInputNumbers[i+1];
+*  if (inputNumbers->Operations[i] == '+') then (yes)
+*  :*result = tempResult + inputNumbers->Operands[i+1];
+*elseif (inputNumbers->Operations[i] =='-') then (yes)
+*  :*result = tempResult - inputNumbers->Operands[i+1];
+*elseif (inputNumbers->Operations[i] =='/') then (yes)
+*  if (!(inputNumbers->Operands[i+1])) then (yes)
+*  :*result =  tempResult / inputNumbers->Operands[i+1];
 *else (no)
 *  :returnStatus = E_NOK;
 *endif
-*elseif ('*') then (yes)
-*  :*result = tempResult * inputNumbers->NumberOfInputNumbers[i+1];
+*elseif (inputNumbers->Operations[i] =='*') then (yes)
+*  :*result = tempResult * inputNumbers->Operands[i+1];
 *else (nothing)
 *  :returnStatus = E_NOK;
 *endif
 *:tempResult = *result;
 *:i++;
-*repeat while (i<inputNumbers->NumberOfInputOperations) is (yes)
+*repeat while (i<inputNumbers->NumOfOperations) is (yes)
 *->no;
 *:return returnStatus;
 *stop
@@ -96,6 +77,6 @@ typedef struct{
 *
 */
 
-ReturnStatus_e Math_Calc(keypad_s *inputNumbers, u64 *result);
+ReturnStatus_e Math_Calc(Keypad_Manager_s *inputNumbers, u64 *result);
 
 #endif /* MATHCALC_H_ */

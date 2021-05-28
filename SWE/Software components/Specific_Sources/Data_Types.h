@@ -1,5 +1,8 @@
+#ifndef DATA_TYPES_H_
+#define DATA_TYPES_H_
 
-/** @struct keypad_s
+
+/** @struct Keypad_Manager_s
  *  	@brief This structure contain the entered operands and operation and their numbers.
  * @param Operands[4]
  *  	@n Contain the enterted operands.
@@ -22,3 +25,4 @@ typedef struct{
 	//status flag to know if operation manager will add the old result to the struct or not befor sending it to the Math cal
 }Keypad_Manager_s;
 
+#endif //DATA_TYPES
