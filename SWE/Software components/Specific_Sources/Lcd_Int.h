@@ -1,8 +1,14 @@
-/*
- * Lcd_Int.h
+/**
+ *@file
  *
- *  Created on: Jan 24, 2021
- *      Author: abdoo
+ *  @date : Jan 24, 2021
+ *   @author: abdoo
+ *
+ * <table>
+*<caption id="multi_row">Document History</caption>
+*<tr><th>Version	<th>Author        		<th>Date   			<th>Change
+*<tr><td>0.1	   	<td>abdoo.    	<td>27-04-2021.  	<td>Initial creation.
+*</table>
  */
 
 #ifndef LCD_INT_H_
@@ -47,7 +53,46 @@
 #define LCD_DDRAM_SECOND_ROW_ADD	0xC0
 
 
-
+/**
+* \par Req Id:
+* 	@n    Req_PO1_DGC_CDD_LCD_001-V1.0
+*
+* \par Covers:
+* 	@n	Req_PO1_DGC_GDD_LCD_0017-V1.2
+*
+* \par Description
+* 	@n This API  is responsible for initializing the Lcd 
+*
+* @param Input:
+* 	@n N/A
+* @param Output:
+* 	@n N/A
+* @param Input/Output:
+* 	@n N/A
+* @return
+* 	@n - E_OK
+* 	@n - E_NOK
+*
+*\callgraph
+*\callergraph
+*
+*
+*@startuml
+*start
+*:delay for 30 ms 
+*:Send first initialization packet 
+*:delay for 40 us
+*:Send second initialization packet
+*:delay for 40 us 
+*:Send third initialization packet 
+*:delay for 1.5 ms
+*:Send forth initialization packet 
+*:delay for 40 us  
+*:return E_OK
+*stop
+*@enduml
+*
+*/
 ReturnStatus_e Lcd_Init(void);
 
 ReturnStatus_e Lcd_Send_Packet(u8 Copy_u8Data,u8 Copy_DataType);
