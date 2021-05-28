@@ -12,25 +12,25 @@
 
 
 
-ReturnStatus_e Math_Calc(keypad_s *inputNumbers, u64 *result)
+ReturnStatus_e Math_Calc(Keypad_Manager_s *inputNumbers, u64 *result)
 {
 	ReturnStatus_e returnStatus = E_OK;
 	u64 tempResult ;
-	tempResult = inputNumbers->NumberOfInputNumbers[0];
-	for(u8 i = 0; i<inputNumbers->NumberOfInputOperations; i++)
+	tempResult = inputNumbers->Operands[0];
+	for(u8 i = 0; i<inputNumbers->NumOfOperations; i++)
 	{
-		switch(inputNumbers->InputOperations[i])
+		switch(inputNumbers->Operations[i])
 		{
 		case '+':
-			*result = tempResult + inputNumbers->NumberOfInputNumbers[i+1];
+			*result = tempResult + inputNumbers->Operands[i+1];
 			break;
 		case '-':
-			*result =  tempResult - inputNumbers->NumberOfInputNumbers[i+1];
+			*result =  tempResult - inputNumbers->Operands[i+1];
 			break;
 		case '/':
-			if (!(inputNumbers->NumberOfInputNumbers[i+1]))
+			if (!(inputNumbers->Operands[i+1]))
 			{
-				*result =  tempResult / inputNumbers->NumberOfInputNumbers[i+1];
+				*result =  tempResult / inputNumbers->Operands[i+1];
 			}
 			else
 			{
@@ -38,7 +38,7 @@ ReturnStatus_e Math_Calc(keypad_s *inputNumbers, u64 *result)
 			}
 			break;
 		case'*':
-			*result =  tempResult * inputNumbers->NumberOfInputNumbers[i+1];
+			*result =  tempResult * inputNumbers->Operands[i+1];
 			break;
 
 		}
