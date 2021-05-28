@@ -46,7 +46,8 @@ typedef enum{
  *  GLOCAL VARIABLES
  *********************************************************************************************************************/
 u8 state = stateNum1;    /*!< initial state*/
-
+u8 flag1=0, flag2=0, flag3=0, flag4=0 ;             /* flag for first digit in each operand */
+u8 counter1=0, counter2=0, counter3=0, counter4=0;  /*counter for size of digits of each operand */
 
 /**********************************************************************************************************************
  *  LOCAL FUNCTION
@@ -172,8 +173,6 @@ static void operationState(u8 keyPressed,u8 nextState, u8 operations, u8 numOfOp
  *  \context       TASK
  *********************************************************************************************************************/
 void Keypad_Manager_MultiLineDisplay(Keypad_Manager_s * Keypad_manager_s){
-	u8 flag1=0, flag2=0, flag3=0, flag4=0 ;             /* flag for first digit in each operand */
-	u8 counter1=0, counter2=0, counter3=0, counter4=0;  /*counter for size of digits of each operand */
 	Keypad_manager_s->NumOfOperands=0;
 	Keypad_manager_s->NumOfOperations=0;
 	u8 Loc_keyPressed = KEYPAD_u8NO_KEY;
